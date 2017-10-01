@@ -53,6 +53,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
+    <Compile Include="tests\dbaccess_tests.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="tests\__init__.py" />
   </ItemGroup>
   <ItemGroup>

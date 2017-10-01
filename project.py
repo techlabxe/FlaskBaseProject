@@ -1,5 +1,6 @@
 ﻿from flask import Flask
 from configs import app_configs
+from flask_pymongo import PyMongo
 
 from apps import main,api
 
@@ -10,6 +11,8 @@ def create_app(config_name = 'develop' ):
     # Blueprint の登録.
     app.register_blueprint( main.app )
     app.register_blueprint( api.app )
+
+    app.mongo = PyMongo(app)
 
     return app
 
